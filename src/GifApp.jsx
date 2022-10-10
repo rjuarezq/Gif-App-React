@@ -1,25 +1,32 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
 
-export const GifApp = ()  => {
+export const GifApp = () => {
 
-    const [categories, setCategories ] = useState(['One puch man', 'Demon Slayer']);
-    //console.log(typeof categories);
-    //console.log(categories);
-    const onAddCategory = () =>{
-        //categories.push('valoran');
-        setCategories(['new value', ...categories]);
-        //setCategories((ctgory) => [...ctgory, 'new item']);
+    const [categories, setCategories] = useState(['One puch man', 'Demon Slayer']);
+
+    const onAddCategory = ( newCategory ) => {
+        console.log(newCategory);
+        const isExist = categories.some(category => category.toLowerCase() === newCategory.toLowerCase());
+        if(isExist) return
+        setCategories([newCategory, ...categories]);
     }
+
     return (
         <>
+            {/* Title */}
             <h1> Gif App </h1>
-                <button onClick={ onAddCategory }> Agregar nuevo valor </button>
-                <ol>
-                    { categories.map( category => {
-                        return <li key={ category } > { category } </li>
-                    }) }
-                    
-                </ol>
+
+            {/* Input */}
+            <AddCategory onNewCategory = { (newElement) => onAddCategory(newElement)}/>
+
+            /* List Gif Categories */
+            <ol>
+                {categories.map(category => {
+                    return <li key={category} > {category} </li>
+                })}
+
+            </ol>
         </>
     );
 }
