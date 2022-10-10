@@ -7,3 +7,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <GifApp/>
   </React.StrictMode>
 );
+    
