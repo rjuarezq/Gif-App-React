@@ -5,7 +5,6 @@ export const AddCategory = ({ onNewCategory }) => {
 
     const onInputChange = ({ target }) => {
         setinputValue(target.value);
-        //nsole.log(target.value);
     }
 
     const onSubmit = ( e ) => {
