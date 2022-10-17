@@ -14,11 +14,13 @@ export const GifApp = () => {
 
     return (
         <>
-            {/* Title */}
-            <h1> Gif App </h1>
+            <div className="header__container">
+                {/* Title */}
+                <h1 className="app__title"> Gif App </h1>
 
-            {/* Input */}
-            <AddCategory onNewCategory={(newElement) => onAddCategory(newElement)} />
+                {/* Input */}
+                <AddCategory onNewCategory={(newElement) => onAddCategory(newElement)} />
+            </div>
 
             {/* List Gif Categories */}
             {

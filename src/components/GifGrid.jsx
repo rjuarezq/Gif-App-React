@@ -20,19 +20,21 @@ export const GifGrid = ({ category }) => {
 
 
     return (
-        <div>
-            <h3> {category} </h3>
-                {
-                    images.map(( item ) => (
-                            <GifItem 
-                                key = { item.id }
-                                //Esparcimos todas props que vienen en item con spread operator
-                                //Tecnica mayormente usada cuando se tiene una gran cantidad de propiedades
-                                {...item}
-                            />
-                    ))
+        <div className="category category__container">
+                <h3 className="category__title"> {category} </h3>
+                <div className="card__flex">
+                    {
+                        images.map(( item ) => (
+                                <GifItem 
+                                    key = { item.id }
+                                    //Esparcimos todas props que vienen en item con spread operator
+                                    //Tecnica mayormente usada cuando se tiene una gran cantidad de propiedades
+                                    {...item}
+                                />
+                        ))
 
-                }
+                    }
+                </div>
         </div>
     );
 }

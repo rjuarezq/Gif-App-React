@@ -18,7 +18,9 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
 
         <form onSubmit={ onSubmit }>
-            <input type="text"
+            <input 
+                className="search" 
+                type="text"
                 placeholder="Ingrese su búsqueda"
                 value = {inputValue}
                 onChange={ (e) => onInputChange(e)} >
