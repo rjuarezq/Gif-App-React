@@ -1,23 +1,10 @@
-import { useState, useEffect } from "react";
-
-import { getGifs } from "../helpers/getGifs";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
 
 export const GifGrid = ({ category }) => {
 
-
-    const [images, setImages] = useState([]);
-    
-    const getImages = async () => {
-        const newImages = await getGifs(category);
-        setImages(newImages);
-    }
-
-    //It avoids us from redoing the HTTP request for every minor change within our page unless a new search is added and the component is retriggered.
-    useEffect(() => {
-        getImages();
-    }, []);
-
+    const {images, isLoading} = useFetchGifs (category);
+    console.log(images, isLoading);
 
     return (
         <div className="category category__container">
