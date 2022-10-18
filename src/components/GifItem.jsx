@@ -2,7 +2,7 @@ export const GifItem = ( {title, url}) => {
     return (
         <div className="card">
             <img src= {url} alt = {title}></img>
-            <a target="__blank" href={url} className="card__description"> {title} </a>
+            <a target="_blank" href={url} className="card__description"> {title} </a>
         </div>
     );
 }
