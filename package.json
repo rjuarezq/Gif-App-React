@@ -1,12 +1,14 @@
 {
+  "homepage": ".",
   "name": "gif-app-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-docs": "vite build && rm -rf docs && mv dist docs"
   },
   "dependencies": {
     "react": "^18.2.0",
