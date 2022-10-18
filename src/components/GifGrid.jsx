@@ -4,7 +4,6 @@ import { GifItem } from "./GifItem";
 export const GifGrid = ({ category }) => {
 
     const {images, isLoading} = useFetchGifs (category);
-    console.log(images, isLoading);
 
     return (
         <div className="category category__container">

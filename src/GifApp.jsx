@@ -3,7 +3,7 @@ import { AddCategory, GifGrid } from "./components";
 
 export const GifApp = () => {
 
-    const [categories, setCategories] = useState(['One piece', 'Demon Slayer']);
+    const [categories, setCategories] = useState(['Tech', 'Developer']);
 
     const onAddCategory = (newCategory) => {
         const isExist = categories.some(category => category.toLowerCase() === newCategory.toLowerCase());
