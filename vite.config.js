@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "./",
+  /*
+  build: {
+    outDir: './docs'//Build App folder whitout a configuration in package.json just using yarn build instead yarn build-docs
+  }
+  */
 })
