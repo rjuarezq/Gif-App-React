@@ -21,7 +21,7 @@ git add -A
 git commit -m 'deploy'
 
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>n
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f github.com/rjuarezq/Gif-App-React.git main:gh-pages
 
 cd -
